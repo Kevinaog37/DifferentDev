@@ -20,6 +20,7 @@
   .laravel-badge { left: 46px; }
   .dotnet-badge { right: -3px; }
   .postgres-badge { right: -12px; }
+  .sqlserver-badge { left: 105px; }
 
   .services-layout {
     gap: 28px;
@@ -123,6 +124,7 @@
   .laravel-badge { left: 4%; }
   .dotnet-badge { right: 7%; }
   .postgres-badge { right: 3%; }
+  .sqlserver-badge { left: 18%; }
 
   .services-layout {
     grid-template-columns: 1fr;
@@ -175,7 +177,7 @@
   }
 
   .contact-form {
-    padding: 27px 22px 18px 0;
+    padding: 27px 22px 18px 28px;
   }
 
   .footer-grid {
@@ -303,6 +305,8 @@
   }
 
   .contact-form {
+    border-top: 1px solid rgba(166, 190, 255, 0.22);
+    border-left: 0;
     padding: 26px 22px 20px;
   }
 
@@ -492,11 +496,7 @@
   }
 
   .contact-section {
-    padding-bottom: 8px;
-  }
-
-  .contact-box {
-    border-radius: 8px;
+    padding-bottom: 0;
   }
 
   .contact-info {

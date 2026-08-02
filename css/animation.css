@@ -75,6 +75,10 @@
   animation-delay: -3s;
 }
 
+.sqlserver-badge {
+  animation-delay: -0.5s;
+}
+
 .orbit-a {
   animation: orbit-turn-a 12s linear infinite;
 }

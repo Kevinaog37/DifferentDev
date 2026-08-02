@@ -607,6 +607,18 @@ h2 {
   color: #65afff;
 }
 
+.sqlserver-badge {
+  bottom: 24px;
+  left: 146px;
+  border-color: rgba(242, 101, 87, 0.58);
+}
+
+.sqlserver-badge .tech-symbol {
+  color: #ff8a78;
+  background: rgba(207, 58, 47, 0.2);
+  font-size: 8px;
+}
+
 .laptop {
   position: absolute;
   z-index: 3;
@@ -1027,7 +1039,7 @@ h2 {
 }
 
 .logo-vue { color: #0c7b62; background: #44caa0; font-size: 12px !important; }
-.logo-blazor { color: #d5b3ff; background: #6b33cb; }
+.logo-angular { color: #fff; background: linear-gradient(135deg, #f5424a, #b71635); }
 .logo-dotnet { width: 24px !important; color: #fff; background: #6537b8; font-size: 5px !important; }
 .logo-laravel { color: #ff5353; background: #241226; font-size: 15px !important; }
 .logo-postgres { color: #6db6ff; background: #192c51; }
@@ -1038,6 +1050,8 @@ h2 {
 .logo-js { color: #202000; background: #f0d72e; font-size: 5px !important; }
 .logo-php { width: 24px !important; color: #fff; background: #6d6bb2; }
 .logo-csharp { color: #fff; background: #7a4eae; }
+.logo-typescript { color: #fff; background: #3178c6; font-size: 6px !important; }
+.logo-python { color: #fff; background: linear-gradient(135deg, #3a74a8 48%, #ffd343 52%); font-size: 6px !important; }
 
 .technology-button {
   display: flex;
@@ -1508,23 +1522,19 @@ h2 {
    CONTACTO
 =========================== */
 .contact-section {
-  padding: 0 0 12px;
-  background: var(--white);
+  padding: 68px 0 0;
+  color: var(--white);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(63, 104, 255, 0.24), transparent 31%),
+    radial-gradient(circle at 82% 82%, rgba(91, 54, 240, 0.2), transparent 28%),
+    linear-gradient(135deg, #0a1d46 0%, #06142f 55%, #030b1a 100%);
 }
 
 .contact-box {
   display: grid;
   grid-template-columns: 0.82fr 1.18fr;
-  min-height: 267px;
-  overflow: hidden;
-  border: 1px solid #193362;
-  border-radius: 10px;
+  min-height: 310px;
   color: #fff;
-  background:
-    radial-gradient(circle at 36% 100%, rgba(28, 90, 235, 0.35), transparent 27%),
-    radial-gradient(circle at 7% 8%, rgba(77, 72, 237, 0.2), transparent 31%),
-    linear-gradient(128deg, #06152e, #020b1c);
-  box-shadow: var(--shadow-dark);
 }
 
 .contact-info {
@@ -1636,7 +1646,8 @@ h2 {
   display: grid;
   align-content: center;
   gap: 10px;
-  padding: 27px 31px 20px 10px;
+  padding: 31px 0 30px 48px;
+  border-left: 1px solid rgba(166, 190, 255, 0.22);
 }
 
 .contact-form label {
@@ -1665,7 +1676,7 @@ h2 {
   border-radius: 5px;
   outline: 0;
   color: #e9efff;
-  background: rgba(17, 35, 70, 0.62);
+  background: rgba(13, 34, 77, 0.58);
   font-size: 9px;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -1710,26 +1721,20 @@ h2 {
    FOOTER
 =========================== */
 .footer {
-  padding: 17px 0 0;
+  padding: 0;
   color: #c2cbe1;
-  background: var(--white);
+  background: #030b1a;
 }
 
 .footer > .container:first-child {
-  overflow: hidden;
-  border: 1px solid #17305b;
-  border-bottom: 0;
-  border-radius: 9px 9px 0 0;
-  background:
-    radial-gradient(circle at 10% 10%, rgba(60, 79, 182, 0.18), transparent 33%),
-    linear-gradient(135deg, #07152e, #030b1a);
+  background: transparent;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 2.2fr repeat(3, 1fr) 0.9fr;
   gap: 30px;
-  padding: 18px 21px 15px;
+  padding: 32px 0 26px;
 }
 
 .footer-brand {
@@ -1785,13 +1790,13 @@ h2 {
 }
 
 .copyright {
-  padding: 6px 0 8px;
-  border-top: 1px solid rgba(18, 41, 82, 0.2);
+  padding: 12px 0 14px;
+  border-top: 1px solid rgba(143, 166, 221, 0.14);
   text-align: center;
 }
 
 .copyright p {
-  color: #667087;
+  color: #8693b0;
   font-size: 7px;
 }
 
