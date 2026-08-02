@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DevCraft - Desarrollo de software a la medida.">
+  <title>DevCraft | Soluciones digitales</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animation.css">
+</head>
+
+<body>
+  <!-- Sprite de iconos reutilizable -->
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="icon-code" viewBox="0 0 24 24">
+      <path d="M8 5 2 12l6 7M16 5l6 7-6 7M14 3l-4 18" />
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="m5 12 4 4L19 6" />
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16" />
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6 6 18" />
+    </symbol>
+    <symbol id="icon-web" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <path d="M3 8h18M7 6h.01M10 6h.01" />
+    </symbol>
+    <symbol id="icon-layers" viewBox="0 0 24 24">
+      <path d="m12 3 9 5-9 5-9-5 9-5Z" />
+      <path d="m3 12 9 5 9-5M3 16l9 5 9-5" />
+    </symbol>
+    <symbol id="icon-cloud" viewBox="0 0 24 24">
+      <path d="M17.5 19H7a5 5 0 1 1 1.2-9.86A6 6 0 0 1 19.8 11 4 4 0 0 1 17.5 19Z" />
+      <path d="M12 11v6M9.5 14.5 12 17l2.5-2.5" />
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24">
+      <path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Z" />
+      <path d="m9 12 2 2 4-4" />
+    </symbol>
+    <symbol id="icon-headset" viewBox="0 0 24 24">
+      <path d="M4 15v-3a8 8 0 0 1 16 0v3" />
+      <rect x="3" y="14" width="4" height="6" rx="2" />
+      <rect x="17" y="14" width="4" height="6" rx="2" />
+      <path d="M17 20c0 1-1 2-3 2h-2" />
+    </symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24">
+      <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m3 7 9 6 9-6" />
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+      <circle cx="12" cy="10" r="2.5" />
+    </symbol>
+    <symbol id="icon-send" viewBox="0 0 24 24">
+      <path d="m22 2-7 20-4-9-9-4 20-7Z" />
+      <path d="M22 2 11 13" />
+    </symbol>
+    <symbol id="icon-briefcase" viewBox="0 0 24 24">
+      <rect x="3" y="7" width="18" height="13" rx="2" />
+      <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2" />
+    </symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24">
+      <circle cx="9" cy="8" r="3" />
+      <path d="M3 20v-1a6 6 0 0 1 12 0v1M16 5.5a3 3 0 0 1 0 5.8M17 14a5 5 0 0 1 4 4.9v1" />
+    </symbol>
+    <symbol id="icon-award" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="5" />
+      <path d="m8.5 12.5-1.5 8 5-3 5 3-1.5-8" />
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path d="m12 3 2.8 5.7L21 9.6l-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z" />
+    </symbol>
+  </svg>
+
+  <div class="page">
+    <!-- Encabezado -->
+    <header class="header" id="inicio">
+      <div class="container nav">
+        <a class="brand" href="#inicio" aria-label="DevCraft - Inicio">
+          <span class="brand-mark">
+            <svg><use href="#icon-code"></use></svg>
+          </span>
+          <span>
+            <strong>DevCraft</strong>
+            <small>Soluciones digitales</small>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <svg><use href="#icon-menu"></use></svg>
+        </button>
+
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a class="active" href="#inicio">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#tecnologias">Tecnologías</a>
+          <a href="#portafolio">Portafolio</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <a class="button button-small button-primary nav-cta" href="#contacto">
+          Cotizar proyecto
+          <svg><use href="#icon-arrow"></use></svg>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-orb orb-one"></div>
+        <div class="hero-orb orb-two"></div>
+        <div class="hero-orb orb-three"></div>
+        <div class="stars"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-content reveal">
+            <p class="eyebrow eyebrow-light">Soluciones digitales que impulsan negocios</p>
+            <h1>Desarrollo de Software <span>a la Medida</span></h1>
+            <p class="hero-description">
+              Creamos aplicaciones web modernas, escalables y seguras para empresas
+              y emprendedores que buscan transformar sus ideas en soluciones reales.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contacto">
+                Solicitar cotización
+                <svg><use href="#icon-arrow"></use></svg>
+              </a>
+              <a class="button button-whatsapp" href="https://wa.me/573001234567" target="_blank" rel="noopener">
+                Hablar por WhatsApp
+                <span class="whatsapp-icon">◔</span>
+              </a>
+            </div>
+
+            <div class="satisfaction">
+              <div class="avatars" aria-label="Clientes satisfechos">
+                <span class="avatar avatar-1">A</span>
+                <span class="avatar avatar-2">C</span>
+                <span class="avatar avatar-3">M</span>
+                <span class="avatar avatar-4">J</span>
+              </div>
+              <p><strong>+30</strong> clientes satisfechos</p>
+            </div>
+          </div>
+
+          <!-- Ilustración creada con HTML y CSS -->
+          <div class="hero-visual" aria-hidden="true">
+            <div class="orbit orbit-a"></div>
+            <div class="orbit orbit-b"></div>
+            <div class="visual-dot dot-a"></div>
+            <div class="visual-dot dot-b"></div>
+            <div class="visual-dot dot-c"></div>
+
+            <div class="tech-badge vue-badge">
+              <span class="tech-symbol">V</span>
+              <b>Vue.js</b>
+            </div>
+            <div class="tech-badge laravel-badge">
+              <span class="tech-symbol">♢</span>
+              <b>Laravel</b>
+            </div>
+            <div class="tech-badge dotnet-badge">
+              <span class="tech-symbol">.N</span>
+              <b>.NET</b>
+            </div>
+            <div class="tech-badge postgres-badge">
+              <span class="tech-symbol">◉</span>
+              <b>PostgreSQL</b>
+            </div>
+
+            <div class="laptop">
+              <div class="laptop-screen">
+                <div class="screen-topbar">
+                  <span></span><span></span><span></span>
+                  <i></i><i></i>
+                </div>
+                <div class="screen-body">
+                  <aside class="dashboard-sidebar">
+                    <b>◈</b><b>⌂</b><b>◌</b><b>⌁</b><b>◫</b>
+                  </aside>
+                  <div class="dashboard-content">
+                    <p class="dashboard-title">Dashboard</p>
+                    <div class="metric-row">
+                      <div class="metric-card graph-card">
+                        <small>Ventas</small>
+                        <strong>$24,780</strong>
+                        <em>+12.6%</em>
+                        <div class="chart-line"></div>
+                      </div>
+                      <div class="metric-card circle-card">
+                        <small>Rendimiento</small>
+                        <div class="progress-ring">72%</div>
+                      </div>
+                    </div>
+                    <div class="mini-metrics">
+                      <div><small>Usuarios</small><b>1,428</b><em>+8.4%</em></div>
+                      <div><small>Pedidos</small><b>320</b><em>+4.1%</em></div>
+                      <div><small>Tasa conversión</small><b>2.4%</b><em>+1.9%</em></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="laptop-base"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Marcas -->
+      <section class="trusted">
+        <div class="container">
+          <p>Empresas que confían en nosotros</p>
+          <div class="trusted-logos">
+            <span>◈ NOVATEC</span>
+            <span>◆ INNOVA</span>
+            <span>△ GLOBAL<span>Soft</span></span>
+            <span>▰ DATAFLOW</span>
+            <span>◐ SOLUTIO</span>
+            <span>⬡ NETCORP</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Servicios -->
+      <section class="section services-section" id="servicios">
+        <div class="container services-layout">
+          <div class="services-main">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Nuestros servicios</p>
+              <h2>Soluciones digitales para<br>cada necesidad</h2>
+            </div>
+
+            <div class="services-grid">
+              <article class="service-card reveal">
+                <div class="service-icon icon-blue"><svg><use href="#icon-web"></use></svg></div>
+                <h3>Desarrollo Web<br>a la Medida</h3>
+                <p>Aplicaciones web personalizadas con tecnologías modernas y arquitecturas escalables.</p>
+              </article>
+
+              <article class="service-card reveal">
+                <div class="service-icon icon-purple"><svg><use href="#icon-layers"></use></svg></div>
+                <h3>Sistemas<br>Empresariales</h3>
+                <p>ERP, CRM, inventarios, facturación y flujos de trabajo que modernizan tus procesos.</p>
+              </article>
+
+              <article class="service-card reveal">
+                <div class="service-icon icon-green"><svg><use href="#icon-cloud"></use></svg></div>
+                <h3>APIs e<br>Integraciones</h3>
+                <p>Desarrollo de APIs RESTful e integraciones con servicios de terceros.</p>
+              </article>
+
+              <article class="service-card reveal">
+                <div class="service-icon icon-yellow"><svg><use href="#icon-shield"></use></svg></div>
+                <h3>Modernización de<br>Software</h3>
+                <p>Actualizamos sistemas antiguos para que sean más eficientes, seguros y escalables.</p>
+              </article>
+
+              <article class="service-card reveal">
+                <div class="service-icon icon-orange"><svg><use href="#icon-headset"></use></svg></div>
+                <h3>Mantenimiento y<br>Soporte</h3>
+                <p>Soporte técnico, corrección de errores y nuevas funcionalidades para tus aplicaciones.</p>
+              </article>
+
+              <article class="service-card reveal">
+                <div class="service-icon icon-blue"><svg><use href="#icon-chart"></use></svg></div>
+                <h3>Consultoría<br>Tecnológica</h3>
+                <p>Te asesoramos para elegir la mejor arquitectura y tecnología para tu proyecto.</p>
+              </article>
+            </div>
+          </div>
+
+          <aside class="technology-card reveal" id="tecnologias">
+            <div class="technology-card-title">
+              <svg><use href="#icon-code"></use></svg>
+              <span>Tecnologías</span>
+            </div>
+
+            <div class="technology-group">
+              <p>Frontend</p>
+              <div class="tech-list tech-list-two">
+                <span class="tech-item"><b class="logo-vue">V</b> Vue.js 3</span>
+                <span class="tech-item"><b class="logo-blazor">◉</b> Blazor</span>
+              </div>
+            </div>
+
+            <div class="technology-group">
+              <p>Backend</p>
+              <div class="tech-list tech-list-two">
+                <span class="tech-item"><b class="logo-dotnet">.NET</b> .NET</span>
+                <span class="tech-item"><b class="logo-laravel">♢</b> Laravel</span>
+              </div>
+            </div>
+
+            <div class="technology-group">
+              <p>Bases de datos</p>
+              <div class="tech-list tech-list-three">
+                <span class="tech-item"><b class="logo-postgres">◉</b> PostgreSQL</span>
+                <span class="tech-item"><b class="logo-mysql">⌁</b> MySQL</span>
+                <span class="tech-item"><b class="logo-sql">◆</b> SQL Server</span>
+              </div>
+            </div>
+
+            <div class="technology-group">
+              <p>Lenguajes</p>
+              <div class="tech-list tech-list-four">
+                <span class="tech-item"><b class="logo-html">5</b> HTML</span>
+                <span class="tech-item"><b class="logo-css">3</b> CSS</span>
+                <span class="tech-item"><b class="logo-js">JS</b> JavaScript</span>
+                <span class="tech-item"><b class="logo-php">PHP</b> PHP</span>
+                <span class="tech-item"><b class="logo-csharp">C</b> C#</span>
+              </div>
+            </div>
+
+            <a class="button button-outline technology-button" href="#contacto">
+              Ver todas las tecnologías
+              <svg><use href="#icon-arrow"></use></svg>
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Portafolio -->
+      <section class="section portfolio-section" id="portafolio">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Proyectos destacados</p>
+            <h2>Algunos de nuestros trabajos</h2>
+          </div>
+
+          <div class="portfolio-grid">
+            <article class="project-card reveal">
+              <div class="project-preview preview-erp">
+                <div class="mock-sidebar"></div>
+                <div class="mock-columns"><i></i><i></i><i></i></div>
+              </div>
+              <div class="project-content">
+                <small>Sistema ERP</small>
+                <h3>Sistema de Gestión Empresarial</h3>
+                <p>Plataforma completa para la gestión de procesos empresariales.</p>
+                <a href="#contacto">Ver más <svg><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-preview preview-shop">
+                <div class="shop-top"></div>
+                <div class="shop-items"><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="project-content">
+                <small>E-commerce</small>
+                <h3>Tienda Online Personalizada</h3>
+                <p>E-commerce escalable con pasarelas de pago y panel administrativo.</p>
+                <a href="#contacto">Ver más <svg><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-preview preview-analytics">
+                <div class="analytics-bars"><i></i><i></i><i></i><i></i></div>
+                <div class="analytics-circle"></div>
+              </div>
+              <div class="project-content">
+                <small>Analytics</small>
+                <h3>Plataforma de Analítica</h3>
+                <p>Dashboards interactivos para análisis de datos en tiempo real.</p>
+                <a href="#contacto">Ver más <svg><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-preview preview-portal">
+                <div class="portal-window"><i></i><i></i><i></i></div>
+                <div class="portal-phones"><b></b><b></b></div>
+              </div>
+              <div class="project-content">
+                <small>Portal web</small>
+                <h3>Portal de Clientes</h3>
+                <p>Portal web para gestión de clientes, soporte y tickets.</p>
+                <a href="#contacto">Ver más <svg><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="center-button">
+            <a class="button button-outline" href="#contacto">
+              Ver todos los proyectos
+              <svg><use href="#icon-arrow"></use></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proceso y métricas -->
+      <section class="section process-section" id="nosotros">
+        <div class="container process-layout">
+          <div>
+            <div class="section-heading reveal">
+              <p class="eyebrow">Nuestro proceso</p>
+              <h2>Así llevamos tu idea al éxito</h2>
+            </div>
+
+            <div class="process-steps">
+              <article class="process-step reveal">
+                <div class="step-icon">♧</div>
+                <span>01</span>
+                <h3>Análisis</h3>
+                <p>Entendemos tu necesidad y objetivos.</p>
+              </article>
+              <article class="process-step reveal">
+                <div class="step-icon">▱</div>
+                <span>02</span>
+                <h3>Diseño</h3>
+                <p>Planificamos la solución y arquitectura.</p>
+              </article>
+              <article class="process-step reveal">
+                <div class="step-icon">♙</div>
+                <span>03</span>
+                <h3>Desarrollo</h3>
+                <p>Construimos tu aplicación.</p>
+              </article>
+              <article class="process-step reveal">
+                <div class="step-icon">⚙</div>
+                <span>04</span>
+                <h3>Pruebas</h3>
+                <p>Validamos calidad y funcionalidad.</p>
+              </article>
+              <article class="process-step reveal">
+                <div class="step-icon">✧</div>
+                <span>05</span>
+                <h3>Entrega</h3>
+                <p>Publicamos y te capacitamos.</p>
+              </article>
+            </div>
+          </div>
+
+          <aside class="numbers-card reveal">
+            <p class="numbers-title">Nuestros números</p>
+            <div class="numbers-grid">
+              <div>
+                <svg><use href="#icon-briefcase"></use></svg>
+                <strong>30+</strong>
+                <span>Proyectos<br>completados</span>
+              </div>
+              <div>
+                <svg><use href="#icon-users"></use></svg>
+                <strong>15+</strong>
+                <span>Clientes<br>satisfechos</span>
+              </div>
+              <div>
+                <svg><use href="#icon-award"></use></svg>
+                <strong>3+</strong>
+                <span>Años de<br>experiencia</span>
+              </div>
+              <div>
+                <svg><use href="#icon-star"></use></svg>
+                <strong>99%</strong>
+                <span>Compromiso con<br>la calidad</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Testimonios -->
+      <section class="section testimonials-section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Testimonios</p>
+            <h2>Lo que dicen nuestros clientes</h2>
+          </div>
+
+          <div class="testimonials-grid">
+            <article class="testimonial-card reveal">
+              <span class="quote">“</span>
+              <p>Excelente trabajo, cumplieron con todos los requerimientos y superaron nuestras expectativas. Los recomendamos 100%.</p>
+              <div class="testimonial-footer">
+                <div><strong>— Carlos M.</strong><small>Gerente General, Novatec</small></div>
+                <span class="stars-rating">★★★★★</span>
+              </div>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <span class="quote">“</span>
+              <p>Profesionales, responsables y siempre dispuestos a ayudar. El sistema que desarrollaron ha optimizado nuestros procesos.</p>
+              <div class="testimonial-footer">
+                <div><strong>— Laura G.</strong><small>Directora, Innova Solutions</small></div>
+                <span class="stars-rating">★★★★★</span>
+              </div>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <span class="quote">“</span>
+              <p>Entrega a tiempo, comunicación constante y un producto final de alta calidad. Sin duda seguiremos trabajando con ellos.</p>
+              <div class="testimonial-footer">
+                <div><strong>— Andrés R.</strong><small>CEO, DataFlow</small></div>
+                <span class="stars-rating">★★★★★</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section class="contact-section" id="contacto">
+        <div class="container contact-box">
+          <div class="contact-info">
+            <p class="eyebrow eyebrow-light">Hablemos</p>
+            <h2>¿Tienes un proyecto en mente?</h2>
+            <p>Cuéntanos y te ayudaremos a hacerlo realidad.</p>
+
+            <ul class="contact-list">
+              <li>
+                <span><svg><use href="#icon-mail"></use></svg></span>
+                <div><b>Email</b><a href="mailto:hola@devcraft.com">hola@devcraft.com</a></div>
+              </li>
+              <li>
+                <span class="contact-whatsapp">◔</span>
+                <div><b>WhatsApp</b><a href="https://wa.me/573001234567" target="_blank" rel="noopener">+57 300 123 4567</a></div>
+              </li>
+              <li>
+                <span><svg><use href="#icon-pin"></use></svg></span>
+                <div><b>Ubicación</b><p>Tu ciudad, País</p></div>
+              </li>
+            </ul>
+
+            <div class="contact-decoration" aria-hidden="true">
+              <span class="decoration-screen">⌘</span>
+              <span class="decoration-code">&lt;/&gt;</span>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <label>
+                Nombre completo
+                <input type="text" name="name" placeholder="Tu nombre" required>
+              </label>
+              <label>
+                Correo electrónico
+                <input type="email" name="email" placeholder="tu@email.com" required>
+              </label>
+            </div>
+            <label>
+              Empresa <span>(opcional)</span>
+              <input type="text" name="company" placeholder="Nombre de tu empresa">
+            </label>
+            <label>
+              Mensaje
+              <textarea name="message" rows="4" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+            </label>
+            <button class="button button-primary form-submit" type="submit">
+              Enviar mensaje
+              <svg><use href="#icon-send"></use></svg>
+            </button>
+            <p class="form-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="#inicio">
+            <span class="brand-mark"><svg><use href="#icon-code"></use></svg></span>
+            <span><strong>DevCraft</strong><small>Soluciones digitales</small></span>
+          </a>
+          <p>Desarrollamos software a la medida<br>para transformar ideas en soluciones que<br>impulsan tu negocio al siguiente nivel.</p>
+        </div>
+
+        <div>
+          <h3>Navegación</h3>
+          <a href="#inicio">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#tecnologias">Tecnologías</a>
+          <a href="#portafolio">Portafolio</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+
+        <div>
+          <h3>Servicios</h3>
+          <a href="#servicios">Desarrollo Web</a>
+          <a href="#servicios">Sistemas Empresariales</a>
+          <a href="#servicios">APIs e Integraciones</a>
+          <a href="#servicios">Modernización</a>
+          <a href="#servicios">Mantenimiento</a>
+          <a href="#servicios">Consultoría</a>
+        </div>
+
+        <div>
+          <h3>Tecnologías</h3>
+          <a href="#tecnologias">Vue.js 3</a>
+          <a href="#tecnologias">Blazor</a>
+          <a href="#tecnologias">.NET</a>
+          <a href="#tecnologias">Laravel</a>
+          <a href="#tecnologias">MySQL</a>
+          <a href="#tecnologias">PostgreSQL</a>
+        </div>
+
+        <div>
+          <h3>Síguenos</h3>
+          <div class="social-links">
+            <a href="#" aria-label="GitHub">GH</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="WhatsApp">◔</a>
+            <a href="#" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright">
+        <p>© 2024 DevCraft. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <a class="floating-whatsapp" href="https://wa.me/573001234567" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp">◔</a>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/animation.js"></script>
+</body>
+</html>
