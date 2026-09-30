@@ -1823,3 +1823,29 @@ h2 {
 .floating-whatsapp:hover {
   transform: scale(1.1);
 }
+
+/* Equipo: acceso al portafolio personal */
+.team-intro { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 28px; margin-bottom: 56px; }
+.team-heading { grid-column: 1 / -1; }
+.team-profile-kevin { background: radial-gradient(ellipse at 10% 20%, #164659, transparent 65%), #09142c; }
+.team-profile-kevin .team-monogram > span { color: #74d7da; }
+.team-profile-kevin .team-profile-link { margin-top: 24px; }
+.team-heading h2 { margin-bottom: 16px; }
+.team-heading > p:last-child { max-width: 380px; color: var(--text-soft); font-size: 13px; line-height: 1.8; }
+.team-profile-card { display: flex; align-items: center; gap: 28px; padding: 30px; border: 1px solid #344575; border-radius: 16px; color: #fff; background: radial-gradient(ellipse at 10% 20%, #303367, transparent 65%), #09142c; box-shadow: 0 12px 30px #13234712; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.team-profile-card:hover { transform: translateY(-4px); border-color: #8291ee; box-shadow: 0 18px 38px #13234725; }
+.team-profile-card:focus-visible { outline: 3px solid var(--primary); outline-offset: 5px; }
+.team-monogram { flex: 0 0 100px; text-align: center; color: #dce2ff; font: 600 90px/1 "Outfit", Arial, sans-serif; letter-spacing: -9px; }
+.team-monogram > span { color: #9a87ff; }
+.team-profile-copy { min-width: 0; }
+.team-profile-role { font-size: 9px; color: #adbcf5; letter-spacing: 1.2px; text-transform: uppercase; }
+.team-profile-copy h3 { margin: 6px 0 10px; font-size: 27px; }
+.team-profile-copy > p { color: #bdc9df; font-size: 12px; line-height: 1.7; }
+.team-profile-stack { display: flex; flex-wrap: wrap; gap: 7px; list-style: none; margin: 16px 0 20px; }
+.team-profile-stack li { padding: 4px 9px; border: 1px solid #ffffff25; border-radius: 5px; font-size: 10px; color: #d6def5; }
+.team-profile-link { display: inline-flex; align-items: center; gap: 10px; color: #bdc7ff; font-size: 12px; font-weight: 600; }
+.team-profile-link svg { width: 16px; height: 16px; transition: transform .25s ease; }
+.team-profile-card:hover .team-profile-link svg { transform: translateX(4px); }
+@media (max-width: 900px) { .team-intro { grid-template-columns: 1fr; gap: 25px; } .team-heading > p:last-child { max-width: 580px; } }
+@media (max-width: 480px) { .team-profile-card { align-items: flex-start; gap: 18px; padding: 24px 20px; } .team-monogram { flex-basis: 55px; font-size: 60px; letter-spacing: -6px; } .team-profile-copy h3 { font-size: 24px; } .team-profile-link { font-size: 11px; } }
+@media (prefers-reduced-motion: reduce) { .team-profile-card, .team-profile-link svg { transition: none; } .team-profile-card:hover, .team-profile-card:hover .team-profile-link svg { transform: none; } }
